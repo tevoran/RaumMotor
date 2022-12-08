@@ -21,3 +21,20 @@ The reflection of the state of T3Vtech-3 and the experience of using it for a co
 - Easy to develop
 
 Each design decision needs to take these into account although the weight of each might vary.
+
+## The Required Systems of the Engine
+
+A game engine is a quite complex system. Therefor it is built with quite a few major subsystems.
+
+The desired or sometimes simply necessary subsystems are:
+
+- Debugging system
+- Build system
+- Configuration system
+- Asset management system
+- Renderer
+- Physics system
+- Audio system
+- Window manager
+- Event system
+- Scripting support
