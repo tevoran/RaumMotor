@@ -28,13 +28,18 @@ A game engine is a quite complex system. Therefor it is built with quite a few m
 
 The desired or sometimes simply necessary subsystems are:
 
-- Debugging system
 - Build system
+- Debugging system
 - Configuration system
 - Asset management system
+- Entity component system
 - Renderer
 - Physics system
 - Audio system
 - Window manager
 - Event system
 - Scripting support
+
+### Build System
+
+As already mentioned above the build system needs to improve upon T3Vtech-3's one. CMake as its base is still a good choice. But it needs to be supported by scripts in order to properly export the game to easily usable packages like ZIP archives or DEB packages especially from Linux as Windows is the main target platform. 
