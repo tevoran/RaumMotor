@@ -16,7 +16,7 @@ This is what intended:
 ```cpp
 void func()
 {
-	return;
+    return;
 }
 ```
 
@@ -24,8 +24,48 @@ This rule also applies to if statements. Which leads to if's like this:
 ```cpp
 if(val == true)
 {
-	func();
+    func();
 }
 ```
 
 Bracketless if statements are to be avoided, since they can be easily overlooked.
+
+### Naming
+
+#### Functions
+
+Function names are written in camel case.
+```cpp
+void beHappy()
+{
+    return;
+}
+```
+
+#### Variables and Classes
+
+Variables use snake case. It is also noteworthy that member variables of classes use an initial "m_" and static member variables an initial "s_".
+```cpp
+int i_am_a_variable = 0;
+
+class cool_class
+{
+    private:
+        bool m_is_this_true = true;
+        static int s_state;
+        long m_large_number = 123456;
+};
+```
+
+#### Macros and Constants
+
+Macros and constants use uppercase snake case. This also applies to enum constants.
+
+```cpp
+#define HOLY_COW
+const int I_AM_A_CONSTANT_AS_WELL 30;
+```
+
+### Indentation
+
+Indentation is done by using 4 spaces instead of a tab.
