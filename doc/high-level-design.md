@@ -30,16 +30,29 @@ The desired or sometimes simply necessary subsystems are:
 
 - Build system
 - Debugging system
+- Memory management system
 - Configuration system
 - Asset management system
 - Entity component system
-- Renderer
 - Physics system
-- Audio system
 - Window manager
+- Renderer
+- Audio system
 - Event system
 - Scripting support
 
 ### Build System
 
-As already mentioned above the build system needs to improve upon T3Vtech-3's one. CMake as its base is still a good choice. But it needs to be supported by scripts in order to properly export the game to easily usable packages like ZIP archives or DEB packages especially from Linux as Windows is the main target platform. 
+As already mentioned above the build system needs to improve upon T3Vtech-3's one. CMake as its base is still a good choice. But it needs to be supported by scripts in order to properly export the game to easily usable packages like ZIP archives or DEB packages. Also crosscompilation functionalities are needed especially for Linux as Windows is still the main gaming platform.
+
+### Debugging System
+
+The debugging system needs to keep track of a lot things if that is desired by the dev. Therefor it needs be toggleable.
+
+When it's activated then it needs to log user defined text output as well as the usage of resources. This means that it is trackable which assets are loaded into memory and whether that happened successfully or not. It is also necessary to log the memory footprint of the engine and the game. Therefor a memory management system is necessary for the engine. Another important part of the debugging system will be an engine intern profiler.
+
+### Memory Management System
+
+The memory management system will be used by the debugging system to keep track of the dynamic used memory of the engine.
+
+But it is important that the memory management system is expandable since a potential use case could be a custom memory allocator to circumvent issues with the OS's memory allocation. The OS might switch into kernel mode for that which is very expensive if done extensively.
