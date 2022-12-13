@@ -56,3 +56,7 @@ When it's activated then it needs to log user defined text output as well as the
 The memory management system will be used by the debugging system to keep track of the dynamic used memory of the engine.
 
 But it is important that the memory management system is expandable since a potential use case could be a custom memory allocator to circumvent issues with the OS's memory allocation. The OS might switch into kernel mode for that which is very expensive if done extensively.
+
+### Configuration System
+
+During initialization of the game engine the configuration system will read a potentially existing configuration file. For the sake of stability the engine should default to a somewhat sane state if there is no configuration file existing. The configuration system will also give information about the current platform to the engine.
