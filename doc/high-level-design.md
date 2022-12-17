@@ -26,6 +26,14 @@ Each design decision needs to take these into account although the weight of eac
 
 The engine itself will be using C++-20.
 
+### Dependencies
+
+The following dependencies are used:
+
+- GLM for math
+- SDL2 for user input, windows
+- stb_image for loading different image formats
+
 ## The Required Systems of the Engine
 
 A game engine is a quite complex system. Therefor it is built with quite a few major subsystems.
