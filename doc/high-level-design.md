@@ -59,6 +59,8 @@ The desired or sometimes simply necessary subsystems are:
 
 As already mentioned above the build system needs to improve upon T3Vtech-3's one. CMake as its base is still a good choice. But it needs to be supported by scripts in order to properly export the game to easily usable packages like ZIP archives or DEB packages. Also crosscompilation functionalities are needed especially for Linux as Windows is still the main gaming platform. Another useful addition is providing webbuilds, so WASM will be used too.
 
+Further information can be found [here](build-system-design.md)
+
 ### Debugging System
 
 The debugging system needs to keep track of a lot things if that is desired by the dev. Therefor it needs be toggleable.
