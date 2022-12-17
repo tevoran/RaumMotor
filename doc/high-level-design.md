@@ -12,7 +12,7 @@ But on the downside T3Vtech-3 was relative inflexible. It had a fixed rendering 
 
 Another point to improve is an easier to use building system. Althogh thanks to CMake and the usage of cross platform tools and libraries it was relative easy to use on Windows and Linux. But it wasn't possible to easily create a binary that runs on all or at least almost all Linux distributions, due to different used versions of shared libraries in each distribution. Also it wasn't possible to create a Windows build on Linux which is very important for games on PC to this day. Which makes an overhauled build system necessary.
 
-### The Design Goals of RaumMotor
+## The Design Goals of RaumMotor
 
 The reflection of the state of T3Vtech-3 and the experience of using it for a couple of projects leads to the three main goals for RaumMotor:
 
@@ -21,6 +21,10 @@ The reflection of the state of T3Vtech-3 and the experience of using it for a co
 - Easy to develop
 
 Each design decision needs to take these into account although the weight of each might vary.
+
+## General Design Decisions
+
+The engine itself will be using C++-20.
 
 ## The Required Systems of the Engine
 
@@ -32,18 +36,20 @@ The desired or sometimes simply necessary subsystems are:
 - Debugging system
 - Memory management system
 - Configuration system
+- Event system
 - Asset management system
 - Entity component system
+- Database for gamestate
 - Physics system
 - Window manager
 - Renderer
 - Audio system
-- Event system
+- Input system
 - Scripting support
 
 ### Build System
 
-As already mentioned above the build system needs to improve upon T3Vtech-3's one. CMake as its base is still a good choice. But it needs to be supported by scripts in order to properly export the game to easily usable packages like ZIP archives or DEB packages. Also crosscompilation functionalities are needed especially for Linux as Windows is still the main gaming platform.
+As already mentioned above the build system needs to improve upon T3Vtech-3's one. CMake as its base is still a good choice. But it needs to be supported by scripts in order to properly export the game to easily usable packages like ZIP archives or DEB packages. Also crosscompilation functionalities are needed especially for Linux as Windows is still the main gaming platform. Another useful addition is providing webbuilds, so WASM will be used too.
 
 ### Debugging System
 
@@ -60,3 +66,7 @@ But it is important that the memory management system is expandable since a pote
 ### Configuration System
 
 During initialization of the game engine the configuration system will read a potentially existing configuration file. For the sake of stability the engine should default to a somewhat sane state if there is no configuration file existing. The configuration system will also give information about the current platform to the engine.
+
+### Event System
+
+The event system will provide a way for passing around information from and to different systems of the engine and the engine's user.
