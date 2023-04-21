@@ -10,7 +10,7 @@ T3Vtech-3 was quite easy to use in terms of its API which is something that woul
 
 But on the downside T3Vtech-3 was relative inflexible. It had a fixed rendering pipeline which made it impossible to render into textures or add customized shaders. This made it very hard to add shadows, portals or even a simple splitscreen for 3D games.
 
-Another point to improve is an easier to use building system. Althogh thanks to CMake and the usage of cross platform tools and libraries it was relative easy to use on Windows and Linux. But it wasn't possible to easily create a binary that runs on all or at least almost all Linux distributions, due to different used versions of shared libraries in each distribution. Also it wasn't possible to create a Windows build on Linux which is very important for games on PC to this day. Which makes an overhauled build system necessary.
+Another point to improve is an easier to use building system. Although thanks to CMake and the usage of cross platform tools and libraries it was relative easy to use on Windows and Linux. But it wasn't possible to easily create a binary that runs on all or at least almost all Linux distributions, due to different used versions of shared libraries in each distribution. Also it wasn't possible to create a Windows build on Linux which is very important for games on PC to this day. Which makes an overhauled build system necessary.
 
 ## The Design Goals of RaumMotor
 
